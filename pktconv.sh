@@ -6,16 +6,12 @@
 die() { echo "Error " $1; exit 100; }
 SED=`which gsed || which sed`
 test "x$SED" = "x" && die "sed not found"
-GREP=`which grep`
-test "x$GREP" = "x" && die "grep not found"
-SORT=`which sort`
-test "x$SORT" = "x" && die "sort not found"
-UNIQ=`which uniq`
-test "x$UNIQ" = "x" && die "uniq not found"
 SH=`which sh`
 test "x$SH" = "x" && die "sh not found"
 CAT=`which cat`
-test "x$SH" = "x" && die "sh not found"
+test "x$CAT" = "x" && die "cat not found"
+FIND=`which find`
+test "x$FIND" = "x" && die "find not found"
 
 usage() {
     echo "pktconv.sh OPTIONS COMMAND"
@@ -29,13 +25,13 @@ usage() {
 RUN=$SH
 
 imports() {
-    find . -name '*.go' | while read x; do
+    $FIND . -name '*.go' | while read x; do
         echo $SED -i -e \'s@"github.com/btcsuite/btcd@"github.com/pkt-cash/pktd@\' $x;
         echo $SED -i -e \'s@"github.com/btcsuite/btcutil@"github.com/pkt-cash/btcutil@\' $x;
     done | $RUN
 }
 rimports() {
-    find . -name '*.go' | while read x; do
+    $FIND . -name '*.go' | while read x; do
         echo $SED -i -e \'s@"github.com/pkt-cash/pktd@"github.com/btcsuite/btcd@\' $x;
         echo $SED -i -e \'s@"github.com/pkt-cash/btcutil@"github.com/btcsuite/btcutil@\' $x;
     done | $RUN
