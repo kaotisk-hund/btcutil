@@ -9,6 +9,7 @@ import (
 	"testing"
 
 	. "github.com/pkt-cash/btcutil"
+	"github.com/pkt-cash/pktd/chaincfg/globalcfg"
 )
 
 func TestAmountCreation(t *testing.T) {
@@ -53,7 +54,7 @@ func TestAmountCreation(t *testing.T) {
 			name:     "one hundred",
 			amount:   100,
 			valid:    true,
-			expected: 100 * SatoshiPerBitcoin,
+			expected: 100 * Amount(globalcfg.SatoshiPerBitcoin()),
 		},
 		{
 			name:     "fraction",
@@ -65,13 +66,13 @@ func TestAmountCreation(t *testing.T) {
 			name:     "rounding up",
 			amount:   54.999999999999943157,
 			valid:    true,
-			expected: 55 * SatoshiPerBitcoin,
+			expected: 55 * Amount(globalcfg.SatoshiPerBitcoin()),
 		},
 		{
 			name:     "rounding down",
 			amount:   55.000000000000056843,
 			valid:    true,
-			expected: 55 * SatoshiPerBitcoin,
+			expected: 55 * Amount(globalcfg.SatoshiPerBitcoin()),
 		},
 
 		// Negative tests.

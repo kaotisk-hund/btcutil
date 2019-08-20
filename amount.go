@@ -8,6 +8,8 @@ import (
 	"errors"
 	"math"
 	"strconv"
+
+	"github.com/pkt-cash/pktd/chaincfg/globalcfg"
 )
 
 // AmountUnit describes a method of converting an Amount to something
@@ -85,7 +87,7 @@ func NewAmount(f float64) (Amount, error) {
 		return 0, errors.New("invalid bitcoin amount")
 	}
 
-	return round(f * SatoshiPerBitcoin), nil
+	return round(f * float64(globalcfg.SatoshiPerBitcoin())), nil
 }
 
 // ToUnit converts a monetary amount counted in bitcoin base units to a
