@@ -93,7 +93,7 @@ func NewAmount(f float64) (Amount, error) {
 // ToUnit converts a monetary amount counted in bitcoin base units to a
 // floating point value representing an amount of bitcoin.
 func (a Amount) ToUnit(u AmountUnit) float64 {
-	return float64(a) / math.Pow10(int(u+8))
+	return float64(a) * math.Pow10(int(-u)) / float64(globalcfg.SatoshiPerBitcoin())
 }
 
 // ToBTC is the equivalent of calling ToUnit with AmountBTC.
