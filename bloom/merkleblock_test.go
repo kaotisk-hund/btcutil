@@ -9,10 +9,10 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/pkt-cash/pktd/chaincfg/chainhash"
-	"github.com/pkt-cash/pktd/wire"
-	"github.com/pkt-cash/btcutil"
-	"github.com/pkt-cash/btcutil/bloom"
+	"github.com/kaotisk-hund/cjcoind/chaincfg/chainhash"
+	"github.com/kaotisk-hund/cjcoind/wire"
+	"github.com/kaotisk-hund/btcutil"
+	"github.com/kaotisk-hund/btcutil/bloom"
 )
 
 func TestMerkleBlock3(t *testing.T) {

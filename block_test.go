@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pkt-cash/pktd/chaincfg/chainhash"
-	"github.com/pkt-cash/pktd/wire"
-	"github.com/pkt-cash/btcutil"
+	"github.com/kaotisk-hund/cjcoind/chaincfg/chainhash"
+	"github.com/kaotisk-hund/cjcoind/wire"
+	"github.com/kaotisk-hund/btcutil"
 	"github.com/davecgh/go-spew/spew"
 )
 

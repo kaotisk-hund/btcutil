@@ -18,11 +18,11 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/pkt-cash/pktd/btcec"
-	"github.com/pkt-cash/pktd/chaincfg"
-	"github.com/pkt-cash/pktd/chaincfg/chainhash"
-	"github.com/pkt-cash/btcutil"
-	"github.com/pkt-cash/btcutil/base58"
+	"github.com/kaotisk-hund/cjcoind/btcec"
+	"github.com/kaotisk-hund/cjcoind/chaincfg"
+	"github.com/kaotisk-hund/cjcoind/chaincfg/chainhash"
+	"github.com/kaotisk-hund/btcutil"
+	"github.com/kaotisk-hund/btcutil/base58"
 )
 
 const (

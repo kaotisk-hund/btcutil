@@ -9,10 +9,10 @@ import (
 	"math"
 	"sync"
 
-	"github.com/pkt-cash/pktd/chaincfg/chainhash"
-	"github.com/pkt-cash/pktd/txscript"
-	"github.com/pkt-cash/pktd/wire"
-	"github.com/pkt-cash/btcutil"
+	"github.com/kaotisk-hund/cjcoind/chaincfg/chainhash"
+	"github.com/kaotisk-hund/cjcoind/txscript"
+	"github.com/kaotisk-hund/cjcoind/wire"
+	"github.com/kaotisk-hund/btcutil"
 )
 
 // ln2Squared is simply the square of the natural log of 2.

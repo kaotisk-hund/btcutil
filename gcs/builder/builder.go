@@ -10,10 +10,10 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/pkt-cash/pktd/chaincfg/chainhash"
-	"github.com/pkt-cash/pktd/txscript"
-	"github.com/pkt-cash/pktd/wire"
-	"github.com/pkt-cash/btcutil/gcs"
+	"github.com/kaotisk-hund/cjcoind/chaincfg/chainhash"
+	"github.com/kaotisk-hund/cjcoind/txscript"
+	"github.com/kaotisk-hund/cjcoind/wire"
+	"github.com/kaotisk-hund/btcutil/gcs"
 )
 
 const (

@@ -8,8 +8,8 @@ import (
 	"math"
 	"testing"
 
-	. "github.com/pkt-cash/btcutil"
-	"github.com/pkt-cash/pktd/chaincfg/globalcfg"
+	. "github.com/kaotisk-hund/btcutil"
+	"github.com/kaotisk-hund/cjcoind/chaincfg/globalcfg"
 )
 
 func TestAmountCreation(t *testing.T) {

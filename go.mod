@@ -1,4 +1,4 @@
-module github.com/pkt-cash/btcutil
+module github.com/kaotisk-hund/btcutil
 
 go 1.12
 
